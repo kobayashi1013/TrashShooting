@@ -8,10 +8,7 @@ public class bulet : MonoBehaviour
 
     private void Update()
     {
-        if (shootbutton.action.)
-        {
-
-        }
+      
         Debug.Log("a");
     }
 

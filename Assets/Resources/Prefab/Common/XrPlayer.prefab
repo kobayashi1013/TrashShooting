@@ -2767,13 +2767,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: adf9dbd8c0440fe44995da2beb70f05f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8747598790942439040}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adf9dbd8c0440fe44995da2beb70f05f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6861415494417688854}
   m_SourcePrefab: {fileID: 100100000, guid: adf9dbd8c0440fe44995da2beb70f05f, type: 3}
 --- !u!4 &7050219985583980568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: adf9dbd8c0440fe44995da2beb70f05f, type: 3}
   m_PrefabInstance: {fileID: 7376281306472818675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7682218567448107682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: adf9dbd8c0440fe44995da2beb70f05f, type: 3}
+  m_PrefabInstance: {fileID: 7376281306472818675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6861415494417688854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682218567448107682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c033ab9655bf70b42b17c799f5b18d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootButton: {fileID: -6859456368979983949, guid: b5175cf33ba520c48872524c8aebc9b1, type: 3}
+  arrowPrefab: {fileID: 4340648280648163200, guid: cc6e7870611a80b4296128c70efa3d0b, type: 3}
+  shootPoint: {fileID: 7050219985583980568}
+  shootForce: 10
+  shootDirection: {x: 0, y: 0, z: 1}
 --- !u!1001 &9146546675144184171
 PrefabInstance:
   m_ObjectHideFlags: 0
