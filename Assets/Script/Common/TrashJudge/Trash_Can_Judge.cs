@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Scenes;
 
 public class Trash_Can_Judge : MonoBehaviour
 {
