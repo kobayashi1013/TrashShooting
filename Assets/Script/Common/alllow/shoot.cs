@@ -29,7 +29,7 @@ public class shoot : MonoBehaviour
         if (rb != null)
         {
             // shootDirection‚ğg‚Á‚Ä–î‚ğËo
-            rb.AddForce(shootDirection.normalized * shootForce, ForceMode.Impulse);  // Œü‚«‚ğ’²®
+            rb.AddForce(this.gameObject.transform.forward * shootForce, ForceMode.Impulse);  // Œü‚«‚ğ’²®
         }
     }
 
