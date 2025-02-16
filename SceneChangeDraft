@@ -18,20 +18,30 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    public void LoadScene(string sceneName)
+    public void LoadTitle()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("TitleScene");
+    }
+
+    public void LoadStage1()
+    {
+        SceneManager.LoadScene("Stage1");
     }
 
     public void LoadNextStage()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        SceneManager.LoadScene("ResultClear");
     }
 
-    public void RestartGame()
+    public void LoadGameOver()
     {
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene("ResultGameOver");
+    }
+
+    public void RestartStage()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
     }
 
     public void QuitGame()
