@@ -147,6 +147,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "shoot",
+                    "type": "Button",
+                    "id": "58222af5-902f-4792-86e0-03e7e1c9458c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -180,6 +189,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eef755e3-d1f7-45d5-a26f-b9daae99c60a",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
