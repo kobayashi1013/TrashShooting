@@ -8,18 +8,24 @@ namespace Common.Player
     {
         [SerializeField] private InputActionProperty select;
 
-        private UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor rayInteractor;
+        private XRRayInteractor rayInteractor;
 
         private void Start()
         {
-            rayInteractor = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor> ();
+            select.action.Enable();
+
+            rayInteractor = GetComponent<XRRayInteractor> ();
         }
 
         private void Update()
         {
-            if (select.action.WasPressedThisFrame())
+            /*if (select.action.triggered)
             {
-                Debug.Log("***************");
+                Debug.LogError("***************");
+            }*/
+            if (rayInteractor.interactablesSelected.Count > 0)
+            {
+                Debug.LogError(rayInteractor.interactablesSelected[0]);
             }
         }
     }
