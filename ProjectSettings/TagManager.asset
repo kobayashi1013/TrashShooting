@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - can
+  - orange
+  - coke
+  - lime
+  - sprite
+  - pepsi
   layers:
   - Default
   - TransparentFX
