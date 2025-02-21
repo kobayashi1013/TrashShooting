@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,24 +19,9 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    public void LoadTitle()
-    {
-        SceneManager.LoadScene("TitleScene");
-    }
-
     public void LoadStage1()
     {
         SceneManager.LoadScene("Stage1");
-    }
-
-    public void LoadNextStage()
-    {
-        SceneManager.LoadScene("ResultClear");
-    }
-
-    public void LoadGameOver()
-    {
-        SceneManager.LoadScene("ResultGameOver");
     }
 
     public void RestartStage()
@@ -48,4 +34,68 @@ public class SceneController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    // Recycling bin logic
+    public enum TrashType { Cans, Plastics, Paper, Glass, Metal, Paint, FluorescentTubes, ChemicalResidues, LightBulb, Batteries }
+
+    public int GetScore(TrashType trashType, string binColor)
+    {
+        if (binColor == "Blue")
+        {
+            switch (trashType)
+            {
+                case TrashType.Cans: return 10;
+                case TrashType.Plastics: return 10;
+                case TrashType.Paper: return 20;
+                case TrashType.Glass: return 20;
+                case TrashType.Metal: return 30;
+            }
+        }
+        else if (binColor == "Red")
+        {
+            switch (trashType)
+            {
+                case TrashType.Paint: return 10;
+                case TrashType.FluorescentTubes: return 10;
+                case TrashType.ChemicalResidues: return 20;
+                case TrashType.LightBulb: return 20;
+                case TrashType.Batteries: return 30;
+            }
+        }
+        return -GetPenalty(trashType);
+    }
+
+    public int GetPenalty(TrashType trashType)
+    {
+        switch (trashType)
+        {
+            case TrashType.Cans: return 10;
+            case TrashType.Plastics: return 10;
+            case TrashType.Paper: return 20;
+            case TrashType.Glass: return 20;
+            case TrashType.Metal: return 30;
+            case TrashType.Paint: return 10;
+            case TrashType.FluorescentTubes: return 10;
+            case TrashType.ChemicalResidues: return 20;
+            case TrashType.LightBulb: return 20;
+            case TrashType.Batteries: return 30;
+        }
+        return 0;
+    }
+
+    public bool IsCorrectBin(TrashType trashType, string binColor)
+    {
+        if (binColor == "Blue")
+        {
+            return trashType == TrashType.Cans || trashType == TrashType.Plastics || trashType == TrashType.Paper || 
+                   trashType == TrashType.Glass || trashType == TrashType.Metal;
+        }
+        else if (binColor == "Red")
+        {
+            return trashType == TrashType.Paint || trashType == TrashType.FluorescentTubes || trashType == TrashType.ChemicalResidues || 
+                   trashType == TrashType.LightBulb || trashType == TrashType.Batteries;
+        }
+        return false;
+    }
 }
+
