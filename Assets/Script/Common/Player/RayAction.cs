@@ -22,11 +22,11 @@ namespace Common.Player
             /*if (select.action.triggered)
             {
                 Debug.LogError(rayi
-            }
+            }*/
             if (rayInteractor.interactablesSelected.Count > 0)
             {
                 Debug.LogError(rayInteractor.interactablesSelected[0]);
-            }*/
+            }
         }
     }
 }
