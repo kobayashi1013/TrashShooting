@@ -24,7 +24,8 @@ public class FallForward : MonoBehaviour
             rb.angularVelocity = Vector3.zero; // Reset rotation force
 
             // APPLY FORCE IN NEGATIVE X DIRECTION (-X, LEFT)
-            rb.AddForce(new Vector3(40f, 10f, 0f), ForceMode.Impulse);
+            //rb.AddForce(new Vector3(40f, 10f, 0f) * 20f, ForceMode.Impulse);
+            this.transform.position += new Vector3(5f, 0f, 0f);
             //rb.AddForce(new Vector3(0f, -10f, 0f), ForceMode.Impulse);
         }
     }
@@ -36,6 +37,11 @@ public class FallForward : MonoBehaviour
             // TEMPORARILY DISABLE RIGIDBODY FOR A MOMENT
             rb.isKinematic = true; // Freeze bottle
             Invoke(nameof(ReEnableRigidbody), 0.05f); // Re-enable after a short delay
+        }
+
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            Destroy(this.gameObject);
         }
     }
 

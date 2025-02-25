@@ -10,7 +10,7 @@ namespace Common.Player
         private void Start()
         {
             //Spawn player.
-            var xrPlayer = Instantiate(_xrPlayerPrefab);
+            var xrPlayer = Instantiate(_xrPlayerPrefab, this.transform.position, this.transform.rotation);
 
             //Camera setting.
             _canvas = FindFirstObjectByType<Canvas>();

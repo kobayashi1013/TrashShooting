@@ -10,7 +10,7 @@ public class Trash_Judge : MonoBehaviour
         switch (other.tag)
         {
             case "paper":
-                points = 10;
+                points = 20;
                 break;
             case "glass":
                 points = 20;
@@ -19,7 +19,7 @@ public class Trash_Judge : MonoBehaviour
                 points = 30;
                 break;
             case "plastic":
-                points = 40;
+                points = 10;
                 break;
             default:
                 points = 0; // No points for unrecognized objects
