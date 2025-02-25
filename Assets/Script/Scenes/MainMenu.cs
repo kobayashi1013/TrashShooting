@@ -15,7 +15,12 @@ public class StartScreenManager : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(FadeOut(startScreen, () => Debug.Log("Game Started!")));
+        StartCoroutine(FadeOut(startScreen, () => SceneManager.LoadScene("GameScene")));
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
     
     IEnumerator FadeOut(CanvasGroup canvasGroup, System.Action onComplete)
@@ -27,7 +32,6 @@ public class StartScreenManager : MonoBehaviour
             canvasGroup.alpha = 1 - (elapsed / fadeDuration);
             yield return null;
         }
-        SceneManager.LoadScene("GameScene");
         canvasGroup.alpha = 0;
         onComplete?.Invoke();
     }
