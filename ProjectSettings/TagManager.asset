@@ -16,6 +16,7 @@ TagManager:
   - glass
   - paper
   - plastic
+  - Floor
   layers:
   - Default
   - TransparentFX

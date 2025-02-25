@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -31.599998
       objectReference: {fileID: 0}
+    - target: {fileID: -7044362983128449422, guid: 0e19830bf20e0154f849c50680874f3b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: -4612894832994691197, guid: 0e19830bf20e0154f849c50680874f3b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -284.6
@@ -496,6 +500,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e19830bf20e0154f849c50680874f3b, type: 3}
       propertyPath: m_Name
       value: dojo mockup
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e19830bf20e0154f849c50680874f3b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2073169290257826437, guid: 0e19830bf20e0154f849c50680874f3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4876,6 +4884,10 @@ PrefabInstance:
     - target: {fileID: 2779210686934531113, guid: 2c057bbae7ccfe94886f9a339bc47d7c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2779210686934531113, guid: 2c057bbae7ccfe94886f9a339bc47d7c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5284586162360185082, guid: 2c057bbae7ccfe94886f9a339bc47d7c, type: 3}
       propertyPath: m_Enabled
