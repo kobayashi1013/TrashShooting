@@ -1,24 +1,48 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-
-public class TrashJudgeManager : MonoBehaviour
+namespace MyGameNamespace  // Change this to your game's namespace
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public static TrashJudgeManager Instance; //Singleton Instance
-    public int count = 0;
+    using UnityEngine;
+    using TMPro;
 
-    private void Awake()
+    public class TrashJudgeManager : MonoBehaviour
     {
-        //Ensure there is only one intance of GameManager
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); //persist across scenes
+        public static TrashJudgeManager Instance;
+        public int count = 0;
+        public TextMeshProUGUI scoreText;
 
-        }
-        else
+        private void Awake()
         {
-            Destroy(gameObject);
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        private void Start()
+        {
+            UpdateScoreUI();
+        }
+
+        public void AddScore(int value)
+        {
+            count += value;
+            UpdateScoreUI();
+        }
+
+        private void UpdateScoreUI()
+        {
+            if (scoreText != null)
+            {
+                scoreText.text = "SCORE : " + count;
+            }
+            else
+            {
+                Debug.LogWarning("Score Text is not assigned in TrashJudgeManager!");
+            }
         }
     }
 }
