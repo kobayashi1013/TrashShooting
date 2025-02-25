@@ -11,6 +11,11 @@ TagManager:
   - sprite
   - pepsi
   - Arrow
+  - metal
+  - bottle
+  - glass
+  - paper
+  - plastic
   layers:
   - Default
   - TransparentFX

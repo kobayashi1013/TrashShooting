@@ -16,25 +16,25 @@ public class Trash_Can_Judge : MonoBehaviour
         //Debug.Log("Collided with: " + other.gameObject.name);
         //BlueBin
         ////////Bottles
-        if (other.gameObject.CompareTag("can"))
+        if (other.gameObject.CompareTag("metal"))
         {
-            TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 10;
+            TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 30;
         }
 
-        else if (other.gameObject.CompareTag("coke"))
+        else if (other.gameObject.CompareTag("paper"))
         {
 
             TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 20;
         }
-        else if (other.gameObject.CompareTag("orange"))
+        else if (other.gameObject.CompareTag("plastic"))
         {
 
-            TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 30;
+            TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 10;
         }
-        else if (other.gameObject.CompareTag("lime"))
+        else if (other.gameObject.CompareTag("glass"))
         {
 
-            TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 40;
+            TrashJudgeManager.Instance.count = TrashJudgeManager.Instance.count + 20;
         }
         else if (other.gameObject.CompareTag("pepsi"))
         {
