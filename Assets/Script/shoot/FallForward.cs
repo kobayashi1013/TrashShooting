@@ -24,7 +24,7 @@ public class FallForward : MonoBehaviour
             rb.angularVelocity = Vector3.zero; // Reset rotation force
 
             // APPLY FORCE IN NEGATIVE X DIRECTION (-X, LEFT)
-            rb.AddForce(new Vector3(40f, 10f, 0f), ForceMode.Impulse);
+            rb.AddForce(new Vector3(40f, 10f, 0f) * 50f, ForceMode.Impulse);
             //rb.AddForce(new Vector3(0f, -10f, 0f), ForceMode.Impulse);
         }
     }

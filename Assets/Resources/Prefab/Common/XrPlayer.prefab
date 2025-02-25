@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 3686481199836399301, guid: 0153a2a32f51d2a469591bd3770322b9, type: 3}
   shootPoint: {fileID: 4761175222909329200}
-  shootForce: 20
+  shootForce: 100
   shoot: {fileID: 859785218594534452, guid: b5175cf33ba520c48872524c8aebc9b1, type: 3}
 --- !u!1 &1077014423064210488
 GameObject:
@@ -1098,8 +1098,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 861381911905111112}
   m_Father: {fileID: 0}
