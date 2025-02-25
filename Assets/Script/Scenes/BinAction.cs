@@ -3,7 +3,7 @@ using UnityEngine;
 public class MovingDustbin : MonoBehaviour
 {
     public float speed = 1f; // Speed of the movement
-    public float moveDistance = 6f; // How far the bin moves from its start position
+    public float moveDistance = 5f; // How far the bin moves from its start position
     public bool moveBackFirst = true; // Determines initial direction
 
     private Vector3 startPos;
