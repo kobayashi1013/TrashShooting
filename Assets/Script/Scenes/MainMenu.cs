@@ -31,4 +31,9 @@ public class StartScreenManager : MonoBehaviour
         canvasGroup.alpha = 0;
         onComplete?.Invoke();
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

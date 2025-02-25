@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ResultScreenManager : MonoBehaviour
 {
-    public CanvasGroup resultScreen;
+    /*public CanvasGroup resultScreen;
     public float fadeDuration = 1f;
     
     void Start()
@@ -14,12 +14,12 @@ public class ResultScreenManager : MonoBehaviour
     
     public void ShowResult()
     {
-        StartCoroutine(FadeIn(resultScreen));
+        StartCoroutine(FadeIn());
     }
     
-    IEnumerator FadeIn(CanvasGroup canvasGroup)
+    IEnumerator FadeIn()
     {
-        float elapsed = 0f;
+        /*float elapsed = 0f;
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
@@ -27,5 +27,16 @@ public class ResultScreenManager : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 1;
+
+        int score = FindFirstObjectByType<ScoreManager>().GetScore();
+        if (score > 100) SceneManager.LoadScene("GameClear");
+        else SceneManager.LoadScene("GameOver");
+    }*/
+
+    public void Result()
+    {
+        int score = FindFirstObjectByType<ScoreManager>().GetScore();
+        if (score > 100) SceneManager.LoadScene("GameClear");
+        else SceneManager.LoadScene("GameOver");
     }
 }

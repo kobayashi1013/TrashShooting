@@ -17,4 +17,9 @@ public class ScoreManager : MonoBehaviour
         score += points; // Increase score
         scoreText.text = "SCORE: " + score; // Update UI text
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }

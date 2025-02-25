@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -37,7 +38,9 @@ public class Timer : MonoBehaviour
 
     void TimerEnded()
     {
-        Debug.Log("Timer has ended!");
+        int score = FindFirstObjectByType<ScoreManager>().GetScore();
+        if (score > 100) SceneManager.LoadScene("GameClear");
+        else SceneManager.LoadScene("GameOver");
         // Add any additional logic for when the timer reaches zero.
     }
 }
